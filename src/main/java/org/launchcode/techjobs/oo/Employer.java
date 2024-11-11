@@ -3,7 +3,7 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public class Employer {
-
+  //Task 1 explored class
     private int id;
     private static int nextId = 1;
     private String value;
