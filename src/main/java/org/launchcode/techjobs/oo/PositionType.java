@@ -41,7 +41,7 @@ public class PositionType {
     }
 
 
-    // Getters and Setters:
+    // Getters and Setters: added
 
     public int getId() {
 
