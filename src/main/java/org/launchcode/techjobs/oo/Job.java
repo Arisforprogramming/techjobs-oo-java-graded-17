@@ -34,19 +34,6 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Job job = (Job) o;
-        return id == job.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
-
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
@@ -94,5 +81,53 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    @Override
+    public String toString() {
+
+        String jobPrintFormat = "";
+        if(name.isEmpty()){
+            name = "Data not available";
+        }
+        if(employer.getValue().equals("")){
+            employer.setValue("Data not available");
+        }
+        if(location.getValue().equals("")){
+            location.setValue("Data not available");
+        }
+        if(positionType.getValue().equals("")){
+            positionType.setValue("Data not available");
+        }
+        if(coreCompetency.getValue().equals("")){
+            coreCompetency.setValue("Data not available");
+        }
+        if (id == 0 && name == null && employer == null && location == null &&
+                positionType == null && coreCompetency == null) {
+            // Return the special message if only the id is populated
+            return "\n"+ "OOPS! This job does not seem to exist." + "\n";
+        }
+
+            jobPrintFormat = "\n" +"ID:"+ "\n"+
+                "Name:"+ name+ "\n" +
+                "Employer:"+employer+ "\n"+
+                "Location:"+location+ "\n"+
+                "Position Type:"+positionType+ "\n"+
+                "Core Competency:"+coreCompetency+ "\n";
+
+        return jobPrintFormat;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Job job = (Job) o;
+        return id == job.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
