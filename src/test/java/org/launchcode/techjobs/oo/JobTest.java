@@ -95,11 +95,11 @@ public class JobTest {
                 new CoreCompetency("Persistence"));
 
         String expectedJob ="\n" + "ID:" + aJob.getId()+"\n" +
-                "Name:" + aJob.getName() +"\n" +
-                "Employer:" + aJob.getEmployer() + "\n" +
-                "Location:" + aJob.getLocation() + "\n" +
-                "Position Type:" + aJob.getPositionType() + "\n" +
-                "Core Competency:" + aJob.getCoreCompetency() + "\n";
+                "Name:"+aJob.getName() +"\n" +
+                "Employer:"+aJob.getEmployer() + "\n" +
+                "Location:"+aJob.getLocation() + "\n" +
+                "Position Type:"+aJob.getPositionType() + "\n" +
+                "Core Competency:"+aJob.getCoreCompetency() + "\n";
         assertEquals(expectedJob, aJob.toString());
 
     }
@@ -113,11 +113,11 @@ public class JobTest {
                 new CoreCompetency(""));
 
         String ExpectedEmptyJob = "\n" +"ID:" + jobTestEmpty.getId()+"\n" +
-                "Name:Data not available"+"\n" +
-                "Employer:Data not available"+"\n" +
-                "Location:Data not available"+"\n" +
-                "Position Type:Data not available"+"\n" +
-                "Core Competency:Data not available"+"\n";
+                "Name:"+"Data not available"+"\n" +
+                "Employer:"+"Data not available"+"\n" +
+                "Location:"+"Data not available"+"\n" +
+                "Position Type:"+"Data not available"+"\n" +
+                "Core Competency:"+"Data not available"+"\n";
 
         assertEquals(ExpectedEmptyJob, jobTestEmpty.toString());
     }

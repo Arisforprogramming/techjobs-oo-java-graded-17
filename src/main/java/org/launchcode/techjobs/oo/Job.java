@@ -110,11 +110,11 @@ public class Job {
         }
 
             jobPrintFormat = "\n" +"ID:"+ id +"\n"+
-                "Name:"+name+ "\n" +
-                "Employer:"+employer+ "\n"+
-                "Location:"+location+ "\n"+
-                "Position Type:"+positionType+ "\n"+
-                "Core Competency:"+coreCompetency+ "\n";
+                "Name: "+name+ "\n" +
+                "Employer: "+employer+ "\n"+
+                "Location: "+location+ "\n"+
+                "Position Type: "+positionType+ "\n"+
+                "Core Competency: "+coreCompetency+ "\n";
 
         return jobPrintFormat;
     }
