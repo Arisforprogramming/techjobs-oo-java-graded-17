@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Job {
 
+    public CoreCompetency getEmployer;
     private int id;
     private static int nextId = 1;
 
@@ -24,6 +25,7 @@ public class Job {
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
+        //this.id = id;
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -42,7 +44,6 @@ public class Job {
     public int getId() {
         return id;
     }
-
     public String getName() {
         return name;
     }
@@ -108,8 +109,8 @@ public class Job {
             return "\n"+ "OOPS! This job does not seem to exist." + "\n";
         }
 
-            jobPrintFormat = "\n" +"ID:"+ "\n"+
-                "Name:"+ name+ "\n" +
+            jobPrintFormat = "\n" +"ID:"+ id +"\n"+
+                "Name:"+name+ "\n" +
                 "Employer:"+employer+ "\n"+
                 "Location:"+location+ "\n"+
                 "Position Type:"+positionType+ "\n"+

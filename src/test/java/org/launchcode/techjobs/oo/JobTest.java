@@ -8,7 +8,7 @@ import static org.testng.Assert.*;
 public class JobTest {
     //TODO: Create your unit tests here
     @Test
-    public void testSettingJob() {
+    public void testSettingJobId() {
         // Create two Job objects using the empty constructor.
         Job jobTestOne = new Job();
         Job jobTestTwo = new Job();
@@ -30,10 +30,10 @@ public class JobTest {
         assertTrue(jobTestThree.getCoreCompetency() instanceof CoreCompetency);
 
         assertEquals("Product tester", jobTestThree.getName());
-        assertEquals("ACME", jobTestThree.getEmployer());
-        assertEquals("Desert", jobTestThree.getLocation());
-        assertEquals("Quality control", jobTestThree.getPositionType());
-        assertEquals("Persistence", jobTestThree.getCoreCompetency());
+        assertEquals("ACME", jobTestThree.getEmployer().getValue());
+        assertEquals("Desert", jobTestThree.getLocation().getValue());
+        assertEquals("Quality control", jobTestThree.getPositionType().getValue());
+        assertEquals("Persistence", jobTestThree.getCoreCompetency().getValue());
     }
 
     // Task 4 Test the equals Method
@@ -94,12 +94,12 @@ public class JobTest {
                 new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
 
-        String expectedJob ="\n" + "ID: " + aJob.getId() +"\n" +
-                "Name: " + aJob.getName() +"\n" +
-                "Employer: " + aJob.getEmployer() + "\n" +
-                "Location: " + aJob.getLocation() + "\n" +
-                "Position Type: " + aJob.getPositionType() + "\n" +
-                "Core Competency: " + aJob.getCoreCompetency() + "\n";
+        String expectedJob ="\n" + "ID:" + aJob.getId()+"\n" +
+                "Name:" + aJob.getName() +"\n" +
+                "Employer:" + aJob.getEmployer() + "\n" +
+                "Location:" + aJob.getLocation() + "\n" +
+                "Position Type:" + aJob.getPositionType() + "\n" +
+                "Core Competency:" + aJob.getCoreCompetency() + "\n";
         assertEquals(expectedJob, aJob.toString());
 
     }
@@ -112,12 +112,12 @@ public class JobTest {
                 new PositionType(""),
                 new CoreCompetency(""));
 
-        String ExpectedEmptyJob = "\n" + "ID: " + jobTestEmpty.getId() +"\n" +
-                "Name: Data not available" +"\n" +
-                "Employer: Data not available" + "\n" +
-                "Location: Data not available" + "\n" +
-                "Position Type: Data not available" +  "\n" +
-                "Core Competency: Data not available" +  "\n";
+        String ExpectedEmptyJob = "\n" +"ID:" + jobTestEmpty.getId()+"\n" +
+                "Name:Data not available"+"\n" +
+                "Employer:Data not available"+"\n" +
+                "Location:Data not available"+"\n" +
+                "Position Type:Data not available"+"\n" +
+                "Core Competency:Data not available"+"\n";
 
         assertEquals(ExpectedEmptyJob, jobTestEmpty.toString());
     }
