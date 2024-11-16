@@ -109,7 +109,7 @@ public class Job {
             return "\n"+ "OOPS! This job does not seem to exist." + "\n";
         }
 
-            jobPrintFormat = "\n" +"ID:"+ id +"\n"+
+            jobPrintFormat = "\n" +"ID: "+ id +"\n"+
                 "Name: "+name+ "\n" +
                 "Employer: "+employer+ "\n"+
                 "Location: "+location+ "\n"+
