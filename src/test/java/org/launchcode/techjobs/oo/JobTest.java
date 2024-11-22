@@ -113,7 +113,7 @@ public class JobTest {
                 new CoreCompetency("Persistence"));
 
         String ExpectedEmptyJob = "\n" +"ID: "+ jobTestEmpty.getId()+"\n" +
-                "Name:"+" "+"\n" +
+                "Name:"+" Data not available"+"\n" +
                 "Employer:"+" ACME"+"\n" +
                 "Location:"+" Desert"+"\n" +
                 "Position Type:"+" Quality control"+"\n"+
